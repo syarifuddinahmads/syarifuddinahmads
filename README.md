@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on secret stuff
 - 🌱 I’m currently learning Optimation & Spring Boot
-- 👯 I’m looking to collaborate on Js project, Angular, Vue or React and everything
+- 👯 I’m looking to collaborate on everything
 - 🤔 I’m looking for help with Optimation & Spring Boot
 - 💬 Ask me about UI/UX Design or Web Development
 - ⚡ Fun fact: i love music and sometimes traveling
