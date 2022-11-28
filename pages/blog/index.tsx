@@ -1,7 +1,11 @@
+import Layout from "../../components/Layouts"
+
 const Blog = () => {
-
-
-    return <p>Blog</p>
+    return <>
+        <Layout>
+            <p>Blog</p>
+        </Layout>
+    </>
 }
 
 export default Blog

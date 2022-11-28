@@ -1,7 +1,11 @@
+import Layout from "../../components/Layouts"
+
 const Project = () => {
-
-
-    return <p>Project</p>
+    return <>
+        <Layout>
+            <p>Project</p>
+        </Layout>
+    </>
 }
 
 export default Project
