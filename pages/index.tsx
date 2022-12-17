@@ -1,9 +1,15 @@
-import Layout from '../components/Layouts'
+import Project from "../components/Project";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function App() {
-  return (
-    <Layout>
 
-    </Layout>
+
+  return (
+    <>
+      <Header />
+      <Project />
+      <Footer />
+    </>
   )
 }
