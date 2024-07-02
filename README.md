@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working at <a href="https://www.inovasiadiwarna.com/" target="_blank">Inovasi Adiwarna Raya</a>
 
-- 🌱 Working on Frontend (NextJs)
+- 🌱 Working on Frontend (NextJs) & Mobile (Android)
 
 - 📄 My experiences in <a href="https://www.linkedin.com/in/syarifuddinahmads" target="_blank">LinkedIn</a>
 
