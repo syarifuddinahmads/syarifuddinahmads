@@ -1,45 +1,39 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { GitHub } from '@mui/icons-material';
+import { GitHub, Web } from '@mui/icons-material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import { Avatar, Grid, IconButton } from '@mui/material';
+import { IconButton, Tooltip } from '@mui/material';
+import { useRouter } from 'next/router';
 
 export default function Introduction() {
+    const router = useRouter();
+
+    const handleNavigation = (url: string) => {
+        window.open(url, '_blank');
+    };
+
     return (
         <>
-            <Box sx={{ width: '100%', mt: 5, mb: 5 }}>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2 }}>
-                    <Grid item xs={12} sm={12} md={3}>
-                        <Avatar
-                            alt="Remy Sharp"
-                            src="./next.svg"
-                            sx={{ width: 175, height: 175, borderRadius: 100, border: 3, borderColor: '#b2ebf2' }}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={9}>
-                        <Typography gutterBottom variant="h4" sx={{ mb: 1 }}>
-                            Ahmad Syarifuddin
-                        </Typography>
-                        <Typography variant="h5" sx={{ mb: 2 }}>
-                            Software Engineer (Frontend & Mobile)
-                        </Typography>
-                        <Typography color="text.secondary" sx={{ mb: 1 }}>
-                            Hey! 👋 I craft tutorials in Frontend and Mobile development. Let’s build something amazing together! 🚀
-                        </Typography>
-                        <Stack direction="row">
-                            <IconButton><GitHub /></IconButton>
-                            <IconButton><LinkedInIcon /></IconButton>
-                            <IconButton><EmailIcon /></IconButton>
-                        </Stack>
-                    </Grid>
-                </Grid>
-
-            </Box>
-
+            <Box sx={{ mt: 5, mb: 5 }}>
+                <Typography gutterBottom variant="h4" sx={{ mb: 0.5 }}>
+                    Ahmad Syarifuddin
+                </Typography>
+                <Typography variant="h5" sx={{ mb: 2 }}>
+                    Software Engineer (Frontend & Mobile)
+                </Typography>
+                <Typography variant='body1' sx={{ mb: 1 }}>
+                    Hey! 👋 I craft tutorials in Frontend and Mobile development. Let’s build something amazing together! 🚀
+                </Typography>
+                <Stack direction="row">
+                    <Tooltip title="Github"><IconButton onClick={() => handleNavigation('https://github.com/syarifuddinahmads')}><GitHub /></IconButton></Tooltip>
+                    <Tooltip title="Linkedin"><IconButton onClick={() => handleNavigation('https://www.linkedin.com/in/syarifuddinahmads')}><LinkedInIcon /></IconButton></Tooltip>
+                    <Tooltip title="Email"><IconButton onClick={() => handleNavigation('mailto:syarifuddinahmads.me@gmail.com')}><EmailIcon /></IconButton></Tooltip>
+                    <Tooltip title="Jeda Ngoding"><IconButton onClick={() => handleNavigation('https://jedangoding.com')}><Web /></IconButton></Tooltip >
+                </Stack >
+            </Box >
         </>
     );
 }
