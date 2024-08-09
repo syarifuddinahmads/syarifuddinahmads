@@ -1,19 +1,22 @@
 import * as React from 'react';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from '@/utils/theme';
-import { Container } from '@mui/material';
+import Head from 'next/head';
+import Footer from '@/components/Footer';
 
-export default function MainLayout(props: { children: React.ReactNode }) {
+interface MainLayoutProps {
+    children: React.ReactNode
+    title: string
+}
+
+export default function MainLayout({ children, title = 'Home' }: MainLayoutProps) {
     return (
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <Container maxWidth="md">
-                    {props.children}
-                </Container>
-            </ThemeProvider>
-        </AppRouterCacheProvider>
+        <>
+            <Head>
+                <title>{`${title} | Ahmad Syarifuddin - Software Engineer (Frontend & Mobile)`}</title>
+                <meta name="description" content={`${title} | Ahmad Syarifuddin - Software Engineer (Frontend & Mobile)`} />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            {children}
+            <Footer />
+        </>
     );
 }

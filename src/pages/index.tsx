@@ -8,13 +8,12 @@ const Page = () => {
   return <>
     <Introduction />
     <Writing/>
-    <Footer/>
   </>
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
   return (
-    <MainLayout>
+    <MainLayout title={'Home'}>
       {page}
     </MainLayout>
   )
