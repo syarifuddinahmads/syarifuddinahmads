@@ -13,7 +13,6 @@ export default function MainLayout({ children, title = 'Home' }: MainLayoutProps
             <Head>
                 <title>{`${title} | Ahmad Syarifuddin - Software Engineer (Frontend & Mobile)`}</title>
                 <meta name="description" content={`${title} | Ahmad Syarifuddin - Software Engineer (Frontend & Mobile)`} />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             {children}
             <Footer />

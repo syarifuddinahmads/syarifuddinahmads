@@ -9,7 +9,8 @@ class MyDocument extends Document {
           <meta name="robots" content="noindex, nofollow" />
           <meta name="description" content={``} />
           <meta name="theme-color" content="#ffffff" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
